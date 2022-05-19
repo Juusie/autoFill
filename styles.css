@@ -1,0 +1,106 @@
+body {
+    background-color: rgb(219, 219, 219);
+    color: rgb(37, 37, 37);
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter
+}
+
+textarea {
+    resize: none;
+    border-radius: 5px;
+}
+
+#app {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+
+#storyText {
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow-wrap: break-word;
+}
+
+.item {
+    background-color: rgb(241, 241, 241);
+    height: 550px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#fat {
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+#thin {
+    margin-left: 5px;
+}
+
+#one {
+    grid-column: 1/4;
+}
+
+#two {
+    grid-column: 4/10;
+}
+
+#three {
+    grid-column: 10/14;
+    padding-left: 20px;
+
+}
+
+label {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.fields {
+    margin-left: 20px;
+}
+
+.heading {
+    margin-left: 20px;
+}
+
+.middle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 12pt;
+    width: 80%;
+    padding-left: 5px;
+    padding-top: 15px;
+}
+
+#summary {
+    height: 50px;
+}
+
+#story {
+    height: 150px;
+}
+
+#opslaan {
+    margin-left: 20px;
+    margin-top: 5px;
+    background-color: #27E67B;
+    border: 10px;
+    height: 40px;
+    color: white;
+    border-radius: 5px;
+}
+
+#two {
+    filter: drop-shadow(0px 8px 5px rgb(165, 165, 165));
+}
+
+.txt {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    padding-left: 5px;
+    font-size: 12pt;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>vue test</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="item" id="one">
+            <h2 class="heading">Meta data</h2>
+            <form class="fields">
+                <label for="title">Titel</label>
+                <textarea class="txt" id="title">{{ titleStuff }}</textarea>
+
+                <label for="title">Datum</label>
+                <textarea class="txt" id="date">{{ date }}</textarea>
+
+                <!-- <label for="title">Tijd</label>
+                <textarea id="time">{{ time }}</textarea>
+            -->
+
+                <label for="title">Locatie</label>
+                <textarea class="txt" id="lacation">{{ location }}</textarea>
+
+                <label for="title">Auteurs</label>
+                <textarea class="txt" id="writers">{{ help }}</textarea>
+
+                <label for="title">Status</label>
+                <textarea class="txt" id="status">{{ status }}</textarea>
+
+                <label for="title">Goedgekeurd door</label>
+                <textarea class="txt" id="approved">{{ approved }}</textarea>
+            </form>
+        </div>
+
+        <div class="item" id="two">
+
+            <h2 class="heading">Story</h2>
+            <form class="fields">
+                <label for="title">Titel</label>
+                <textarea v-model="title" id="mainTitle" class="middle"></textarea>
+
+                <label for="summary">Samenvatting</label>
+                <textarea v-model="summary" id="summary" class="middle"></textarea>
+
+                <label for="story">Story</label>
+                <textarea v-model="story" id="story" class="middle"></textarea>
+
+            </form>
+            <button @click="fillInForm" id="opslaan">Opslaan</button>
+
+            <!--<form action="" id="user">
+                <input type="radio" id="piet" value="PietDeGraaf" name="usr"checked>
+                <label for="piet">Piet de Graaf</label>
+                <input type="radio" id="julius" value="JuliusVanOosterhout" name="usr">
+                <label for="julius">Julius van Oosterhout</label>
+            </form>-->
+
+            <select v-model="writer">
+                <option disabled value="">Kies gebruiker</option>
+                <option>Piet de Graaf</option>
+                <option>Julius van Oosterhout</option>
+                <option>Titus Bakman</option>
+            </select>
+
+        </div>
+
+        <div @mouseover="moveOn" @mouseOut="moveOff" class="item" id="three">
+            <h2>Basis story</h2>
+            <div id="storyText">
+                <p id="fat">{{ stuff2 }}</p>
+                <p id="thin">{{ stuff }}</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
